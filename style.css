@@ -1,0 +1,124 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+
+.main-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 0.8;
+  color: #1b29a7;
+}
+
+.small-sub-title {
+  text-align: center;
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px; /* Adjust this value to fine-tune spacing */
+  font-family: Arial;
+}
+
+/*Background colour*/
+
+body {
+  background-color: #f9f6f6;
+}
+
+.main-photo {
+  display: flex;   /*arange the photo horizontally*/
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap photos into place */
+  gap: 8px; /* Space between photos */
+  padding: 20px;
+  margin-right:2px;
+  margin-left:2px;
+}
+
+.main-photo img {
+  scroll-snap-align: start; /* Snap each photo to the start */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+
+#Iphone16 {
+  border: 2px solid rgb(21, 33, 173);
+  height: 300px;
+  width: 250px;
+}
+
+#Apple-Ipad-Pro {
+  border: 2px solid rgb(21, 33, 173);
+  height: 300px;
+  width: 400px;
+}
+
+#Apple-Watch {
+  border: 2px solid rgb(21, 33, 173);
+  height: 300px;
+  width: 350px;
+}
+
+#Apple-VR {
+  border: 2px solid rgb(21, 33, 173);
+  height: 300px;
+  width: 350px;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  background-color: #f6f9fa;
+}
+
+.main-photo img:hover {    /*Will show the effect when user touch the picture*/
+  border: 4px solid #66813b; /* Change border color */
+  transform: scale(1.05); /* Slightly enlarge the image */
+  transition: all 0.3s ease-in-out; /* Smooth effect */
+}
+
+.main-link:hover {            /*Will show the effect when user touch the link*/
+  transform: scale(1.05); /* Slightly enlarge the image */
+  transition: all 0.3s ease-in-out; /* Smooth effect */
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide dropdown by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+/* Style links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change background color on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown when the class is added */
+.show {
+  display: block;
+}

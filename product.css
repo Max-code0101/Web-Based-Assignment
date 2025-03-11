@@ -1,0 +1,512 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the default font for the page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #f4f4f4; /* Sets the background color of the page */
+    color: #000; /* Sets the default text color to black */
+    line-height: 1.6; /* Sets the line height for better readability */
+}
+
+/* Styles for all heading elements */
+h1, h2, h3, h4, h5, h6 {
+    color: #000; /* Sets heading text color to black */
+    margin: 0 0 15px; /* Adds margin below headings */
+}
+
+/* Styles for anchor (link) elements */
+a {
+    color: #000; /* Sets link text color to black */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover for links */
+}
+
+/* Header Styles */
+header {
+    background-color: #333; /* Sets the header background color */
+    color: #fff; /* Sets the header text color to white */
+    padding: 15px 20px; /* Adds padding inside the header */
+    display: flex; /* Makes the header a flex container */
+    justify-content: space-between; /* Spaces out header content */
+    align-items: center; /* Vertically centers header content */
+    position: relative; /* Allows positioning of child elements */
+}
+
+/* Styles for the left section of the header */
+.header-left {
+    display: flex; /* Makes the left section a flex container */
+    align-items: center; /* Vertically centers content */
+    gap: 10px; /* Adds space between child elements */
+}
+
+/* Styles for the logo section */
+.logo {
+    display: flex; /* Makes the logo section a flex container */
+    align-items: center; /* Vertically centers logo and back button */
+    gap: 10px; /* Adds space between logo and back button */
+}
+
+/* Styles for the back button */
+.back-button {
+    color: #fff; /* Sets the back button text color to white */
+    text-decoration: none; /* Removes underline from the back button */
+    font-size: 16px; /* Sets the font size */
+    display: flex; /* Makes the back button a flex container */
+    align-items: center; /* Vertically centers the back button text */
+    gap: 5px; /* Adds space between the arrow and text */
+}
+
+.back-button:hover {
+    color: #ddd; /* Changes text color on hover */
+}
+
+/* Styles for the header title */
+header h1 {
+    margin: 0; /* Removes default margin */
+    font-size: 24px; /* Sets the font size */
+    text-align: center; /* Centers the title text */
+    flex: 1; /* Allows the title to take up remaining space */
+}
+
+/* Styles for the right section of the header (search and cart) */
+.header-right {
+    display: flex; /* Makes the right section a flex container */
+    align-items: center; /* Vertically centers search and cart */
+    gap: 20px; /* Adds space between search and cart */
+}
+
+/* Styles for the search container */
+.search-container {
+    display: flex; /* Makes the search container a flex container */
+    align-items: center; /* Vertically centers search bar and button */
+    gap: 10px; /* Adds space between search bar and button */
+}
+
+/* Styles for the search input field */
+.search-bar {
+    padding: 8px; /* Adds padding inside the search bar */
+    border: 1px solid #ccc; /* Adds a border */
+    border-radius: 4px; /* Rounds the corners */
+    width: 200px; /* Sets the width of the search bar */
+}
+
+/* Styles for the search button */
+.search-button {
+    padding: 8px 12px; /* Adds padding inside the button */
+    background-color: #007bff; /* Sets the button background color */
+    color: white; /* Sets the button text color */
+    border: none; /* Removes the border */
+    border-radius: 4px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Changes button color on hover */
+}
+
+/* Styles for the cart container */
+.cart-container {
+    position: relative; /* Allows positioning of the dropdown */
+}
+
+/* Styles for the cart link */
+.cart-link {
+    text-decoration: none; /* Removes underline from the cart link */
+    color: inherit; /* Inherits the text color */
+}
+
+/* Styles for the cart icon */
+.cart-icon {
+    font-size: 24px; /* Sets the icon size */
+    position: relative; /* Allows positioning of the cart count */
+    padding: 8px; /* Adds padding around the icon */
+}
+
+/* Styles for the cart count badge */
+.cart-count {
+    position: absolute; /* Positions the count badge */
+    top: -10px; /* Moves the badge up */
+    right: -15px; /* Moves the badge to the right */
+    background: #ff4444; /* Sets the badge background color */
+    color: white; /* Sets the badge text color */
+    border-radius: 50%; /* Makes the badge circular */
+    padding: 3px 8px; /* Adds padding inside the badge */
+    font-size: 14px; /* Sets the font size */
+    font-family: Arial; /* Sets the font family */
+}
+
+/* Styles for the cart dropdown */
+.cart-dropdown {
+    display: none; /* Hides the dropdown by default */
+    position: absolute; /* Positions the dropdown */
+    right: 0; /* Aligns the dropdown to the right */
+    top: 35px; /* Positions the dropdown below the cart icon */
+    background: #fff; /* Sets the dropdown background color */
+    border: 1px solid #ddd; /* Adds a border */
+    width: 300px; /* Sets the dropdown width */
+    max-height: 70vh; /* Limits the dropdown height */
+    padding: 15px; /* Adds padding inside the dropdown */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+
+/* Shows the dropdown when hovering over the cart container */
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+/* Styles for each item in the cart dropdown */
+.cart-item {
+    display: flex; /* Makes each item a flex container */
+    justify-content: space-between; /* Spaces out item details */
+    padding: 10px 0; /* Adds padding above and below each item */
+    border-bottom: 1px solid #eee; /* Adds a border below each item */
+    font-size: 14px; /* Sets the font size */
+}
+
+/* Styles for the price of each cart item */
+.cart-item-price {
+    margin-left: 20px; /* Adds space between item details and price */
+    font-weight: bold; /* Makes the price text bold */
+    white-space: nowrap; /* Prevents the price from wrapping */
+}
+
+/* Styles for the total price in the cart dropdown */
+.cart-total {
+    font-weight: bold; /* Makes the total text bold */
+    text-align: right; /* Aligns the total to the right */
+    margin-top: 15px; /* Adds space above the total */
+    padding-top: 10px; /* Adds padding above the total */
+    border-top: 2px solid #fffefe; /* Adds a border above the total */
+}
+
+/* Product Details Section */
+.product-details {
+    display: flex; /* Makes the product details section a flex container */
+    gap: 20px; /* Adds space between video and content sections */
+    padding: 20px; /* Adds padding inside the section */
+    max-width: 1200px; /* Limits the maximum width */
+    margin: 0 auto; /* Centers the section horizontally */
+    background-color: #fff; /* Sets the background color */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+
+/* Styles for the video container */
+.video-container {
+    flex: 1; /* Allows the video container to take up space */
+    max-width: 50%; /* Limits the width to 50% of the parent */
+}
+
+/* Styles for videos and images inside the video container */
+.video-container video,
+.video-container img {
+    width: 100%; /* Makes the media fill the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounds the corners */
+    border: 2px solid #ddd; /* Adds a border */
+    margin-bottom: 20px; /* Adds space below each media element */
+}
+
+/* Styles for the content container */
+.content-container {
+    flex: 1; /* Allows the content container to take up space */
+    max-width: 50%; /* Limits the width to 50% of the parent */
+}
+
+/* Slider Styles */
+.slider {
+    position: relative; /* Allows positioning of slider buttons */
+    width: 100%; /* Makes the slider fill its container */
+    overflow: hidden; /* Hides overflow content */
+    margin-bottom: 20px; /* Adds space below the slider */
+}
+
+/* Styles for the slides container */
+.slides {
+    display: flex; /* Makes the slides a flex container */
+    transition: transform 0.5s ease-in-out; /* Adds a smooth slide transition */
+}
+
+/* Styles for each slide */
+.slide {
+    width: 100%; /* Makes each slide fill the container */
+    height: auto; /* Maintains aspect ratio */
+    flex-shrink: 0; /* Prevents slides from shrinking */
+    object-fit: cover; /* Ensures the image covers the slide */
+    border: 2px solid #ddd; /* Adds a border */
+    border-radius: 8px; /* Rounds the corners */
+}
+
+/* Styles for slider navigation buttons */
+.slider-button {
+    position: absolute; /* Positions the buttons */
+    top: 50%; /* Centers the buttons vertically */
+    transform: translateY(-50%); /* Fine-tunes vertical centering */
+    background-color: rgba(0, 0, 0, 0.5); /* Sets the button background */
+    color: white; /* Sets the button text color */
+    border: none; /* Removes the border */
+    padding: 10px; /* Adds padding inside the button */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    font-size: 18px; /* Sets the font size */
+    border-radius: 50%; /* Makes the buttons circular */
+    width: 40px; /* Sets the button width */
+    height: 40px; /* Sets the button height */
+    display: flex; /* Makes the buttons flex containers */
+    align-items: center; /* Centers the button content vertically */
+    justify-content: center; /* Centers the button content horizontally */
+}
+
+/* Styles for the previous button */
+.slider-button.prev {
+    left: 10px; /* Positions the previous button on the left */
+}
+
+/* Styles for the next button */
+.slider-button.next {
+    right: 10px; /* Positions the next button on the right */
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darkens the button on hover */
+}
+
+/* Product Info and Buttons */
+.product-info {
+    text-align: center; /* Centers the product info */
+}
+
+/* Styles for the product price */
+.price {
+    font-size: 24px; /* Sets the font size */
+    color: #000; /* Sets the text color */
+    margin-bottom: 20px; /* Adds space below the price */
+}
+
+/* Styles for the color options */
+.color-options {
+    display: flex; /* Makes the color options a flex container */
+    gap: 10px; /* Adds space between color options */
+    justify-content: center; /* Centers the color options */
+    margin-bottom: 20px; /* Adds space below the color options */
+}
+
+/* Styles for each color option */
+.color-option {
+    width: 40px; /* Sets the width of each option */
+    height: 40px; /* Sets the height of each option */
+    border: 2px solid #ccc; /* Adds a border */
+    border-radius: 50%; /* Makes the options circular */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Adds smooth transitions */
+}
+
+.color-option:hover {
+    border-color: #000; /* Changes border color on hover */
+    transform: scale(1.1); /* Scales up the option on hover */
+}
+
+.color-option.selected {
+    border-color: #000; /* Changes border color when selected */
+    transform: scale(1.1); /* Scales up the selected option */
+}
+
+/* Specific styles for each color option */
+.color-option[data-color="blue"] {
+    background-color: blue; /* Sets the background color for blue */
+}
+
+.color-option[data-color="white"] {
+    background-color: white; /* Sets the background color for white */
+}
+
+.color-option[data-color="black"] {
+    background-color: black; /* Sets the background color for black */
+}
+
+/* Styles for the storage options */
+.storage-options {
+    margin-bottom: 20px; /* Adds space below the storage options */
+}
+
+/* Styles for each storage option */
+.storage-option {
+    background-color: #007bff; /* Sets the background color */
+    color: #fff; /* Sets the text color */
+    border: none; /* Removes the border */
+    padding: 10px 20px; /* Adds padding inside the button */
+    margin: 5px; /* Adds space around the button */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background-color 0.3s ease; /* Adds a smooth transition */
+}
+
+.storage-option:hover {
+    background-color: #0056b3; /* Changes button color on hover */
+}
+
+.storage-option.selected {
+    background-color: #0056b3; /* Changes button color when selected */
+    border: 2px solid #000; /* Adds a border when selected */
+}
+
+/* Product Description */
+.product-description {
+    margin-top: 20px; /* Adds space above the description */
+    text-align: left; /* Aligns the text to the left */
+    max-width: 800px; /* Limits the maximum width */
+    margin-left: auto; /* Centers the description horizontally */
+    margin-right: auto; /* Centers the description horizontally */
+    padding: 20px; /* Adds padding inside the description */
+    background-color: #fff; /* Sets the background color */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+
+/* Styles for headings inside the product description */
+.product-description h3 {
+    font-size: 20px; /* Sets the font size */
+    margin-top: 20px; /* Adds space above the heading */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+/* Styles for paragraphs and lists inside the product description */
+.product-description p, .product-description ul {
+    font-size: 16px; /* Sets the font size */
+    line-height: 1.6; /* Sets the line height */
+}
+
+/* Styles for unordered lists inside the product description */
+.product-description ul {
+    padding-left: 20px; /* Adds padding to the left of the list */
+}
+
+/* Styles for list items inside the product description */
+.product-description ul li {
+    margin-bottom: 10px; /* Adds space below each list item */
+}
+
+/* Warranty Section */
+.warranty-section {
+    margin-top: 20px; /* Adds space above the warranty section */
+}
+
+/* Styles for headings inside the warranty section */
+.warranty-section h3 {
+    font-size: 20px; /* Sets the font size */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+/* Styles for paragraphs inside the warranty section */
+.warranty-section p {
+    font-size: 14px; /* Sets the font size */
+    margin-bottom: 5px; /* Adds space below each paragraph */
+}
+
+/* Sticky Price and Add to Cart Section */
+.sticky-price-cart {
+    position: fixed; /* Makes the section stick to the bottom */
+    bottom: 0; /* Positions the section at the bottom */
+    left: 0; /* Aligns the section to the left */
+    right: 0; /* Aligns the section to the right */
+    background-color: #fff; /* Sets the background color */
+    padding: 15px 20px; /* Adds padding inside the section */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+    display: flex; /* Makes the section a flex container */
+    justify-content: space-between; /* Spaces out the content */
+    align-items: center; /* Vertically centers the content */
+    z-index: 1000; /* Ensures the section stays on top */
+}
+
+/* Styles for the price display */
+.price-display {
+    font-size: 24px; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+}
+
+/* Styles for the financing info */
+.financing-info {
+    text-align: right; /* Aligns the text to the right */
+    font-size: 14px; /* Sets the font size */
+}
+
+/* Styles for the Add to Cart button */
+.add-to-cart {
+    background-color: #a541b3; /* Sets the button background color */
+    color: #fff; /* Sets the button text color */
+    border: none; /* Removes the border */
+    padding: 15px 30px; /* Adds padding inside the button */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 18px; /* Sets the font size */
+    transition: background-color 0.3s ease; /* Adds a smooth transition */
+}
+
+.add-to-cart:disabled {
+    background-color: #ccc; /* Changes button color when disabled */
+    cursor: not-allowed; /* Changes the cursor when disabled */
+}
+
+.add-to-cart:hover:not(:disabled) {
+    background-color: #e95be4; /* Changes button color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stacks header content vertically */
+        align-items: flex-start; /* Aligns content to the left */
+        gap: 10px; /* Adds space between header elements */
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%; /* Makes the sections take up full width */
+        justify-content: space-between; /* Spaces out content */
+    }
+
+    header h1 {
+        text-align: left; /* Aligns the title to the left */
+    }
+
+    .search-container {
+        flex: 1; /* Allows the search container to take up space */
+    }
+
+    .search-bar {
+        width: 100%; /* Makes the search bar take up full width */
+    }
+
+    .product-details {
+        flex-direction: column; /* Stacks video and content vertically */
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+
+    .video-container,
+    .content-container {
+        max-width: 100%; /* Makes the containers take up full width */
+    }
+
+    .sticky-price-cart {
+        flex-direction: column; /* Stacks price and button vertically */
+        align-items: flex-start; /* Aligns content to the left */
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+
+    .price-display,
+    .financing-info {
+        text-align: left; /* Aligns text to the left */
+    }
+
+    .add-to-cart {
+        width: 100%; /* Makes the button take up full width */
+        margin-top: 10px; /* Adds space above the button */
+    }
+}
+
+/* Adds space below the last image in the video container */
+.video-container img:last-child {
+    margin-bottom: 100px; /* Adjust this value as needed */
+}

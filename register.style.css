@@ -1,0 +1,38 @@
+/* Set background color */
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  background: url(Gallery/bg9.avif) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+*{
+    outline: 1px solid red;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 16px;
+}
+
+.alert {
+  .alert {
+    display: block; /* Ensures each message is on a new line */
+    width: 100%; /* Makes sure it doesn't stretch */
+    margin-bottom: 5px; /* Adds spacing between error messages */
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
